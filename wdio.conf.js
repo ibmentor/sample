@@ -23,7 +23,7 @@ export const config = {
     // will be called from there.
     //
     specs: [
-        './test/specs/**/*.js'
+        'npx wdio run ./wdio.conf.js --spec tests/sampleTest.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -293,3 +293,4 @@ export const config = {
     // onReload: function(oldSessionId, newSessionId) {
     // }
 }
+ 

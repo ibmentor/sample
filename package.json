@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "npx wdio run ./wdio.conf.js --spec tests/sampleTest.js",
     "wdio": "wdio run ./wdio.conf.js"
