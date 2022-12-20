@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npx cross-env ENV=uat runEnv=local reporter=spec wdio run ./wdio.conf.js --spec tests/sampleTest.js",
     "wdio": "wdio run ./wdio.conf.js"
   },
   "author": "",
