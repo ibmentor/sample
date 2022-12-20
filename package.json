@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx cross-env ENV=uat runEnv=local reporter=spec wdio run ./wdio.conf.js --spec tests/sampleTest.js",
+    "test": "npx wdio run ./wdio.conf.js --spec tests/sampleTest.js",
     "wdio": "wdio run ./wdio.conf.js"
   },
   "author": "",
