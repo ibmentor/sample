@@ -1,15 +1,18 @@
 version: 2.1
+orbs:
+  wait-for: cobli/wait-for@1.0.0
 jobs:
  build:
   working_directory: ~/public
   docker:
       - image: cimg/node:19.2.0
       - image: cimg/openjdk:19.0.1
-  steps:
+  steps:   
     - checkout
-    - run:
+    - wait-for/openjdk
+    - run:  
        name: update-npm
-       command: npm install
+       command: npm install       
     - restore_cache:
        key: dependency-cache-{{ checksum "package.json" }}
     - run:
@@ -19,7 +22,7 @@ jobs:
         paths:
           - "./node_modules"
         key:  dependency-cache-{{ checksum "package.json" }}
-    - run:
+    - run: 
        name: test
        command: npm test
     - store_artifacts:
