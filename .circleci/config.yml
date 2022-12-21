@@ -3,7 +3,7 @@ jobs:
  build:
   working_directory: ~/public
   docker:      
-      - image: cimg/node:19.2.0
+      - image: cimg/node:19.2.0 ;sleep 5
       - image: cimg/openjdk:19.0.1
   steps:   
     - checkout
