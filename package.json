@@ -17,13 +17,14 @@
     "@wdio/cli": "^8.0.13",
     "@wdio/local-runner": "^8.0.13",
     "@wdio/mocha-framework": "^8.0.13",
-    "@wdio/selenium-standalone-service": "^8.0.13",
     "@wdio/spec-reporter": "^8.0.13",
     "wdio": "^6.0.1",
     "wdio-chromedriver-service": "^8.0.1"
   },
   "dependencies": {
     "@wdio/config": "^8.0.13",
-    "chromedriver": "^108.0.0"
+    "chromedriver": "^108.0.0",
+    "dotenv": "^16.0.3",
+    "expect-webdriverio": "^4.0.1"
   }
 }
