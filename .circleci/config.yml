@@ -8,7 +8,7 @@ jobs:
     - checkout
     - run:
        name: update-npm
-       command: "npx wdio sample"
+       command: npm install
     - restore_cache:
        key: dependency-cache-{{ checksum "package.json" }}
     - run:
