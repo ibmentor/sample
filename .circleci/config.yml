@@ -4,10 +4,10 @@ jobs:
   working_directory: ~/public
   docker:      
       - image: cimg/node:19.2.0
-      - image: cimg/openjdk:14.0-node
+      - image: cimg/openjdk:11.0.16
   steps:   
     - checkout
-    - run: java --version
+   #  - run: java --version
     - run:  
        name: update-npm
        command: npm install       
