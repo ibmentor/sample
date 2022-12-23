@@ -4,7 +4,8 @@ jobs:
   working_directory: ~/public
   docker:      
       - image: cimg/node:19.2.0
-      - image: cimg/openjdk:11.0.16
+      - image: selenium/node-chrome:dev
+    #   - image: cimg/openjdk:11.0.16
   steps:   
     - checkout
    #  - run: java --version
