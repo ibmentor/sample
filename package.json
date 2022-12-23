@@ -25,7 +25,7 @@
   "dependencies": {
     "@wdio/config": "^8.0.13",
     "@wdio/selenium-standalone-service": "^8.0.13",
-    "chromedriver": "^108.0.0",
+    "chromedriver": "96.0.0",
     "dotenv": "^16.0.3",
     "expect-webdriverio": "^4.0.1"
   }
