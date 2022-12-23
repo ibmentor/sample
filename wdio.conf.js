@@ -111,15 +111,15 @@ export const config = {
     connectionRetryCount: 3,
     //
     // Test runner services
-    hostname:localhost,
-    port: 4444,
-    path: "/",
+    // hostname:localhost,
+    // port: 4444,
+    // path: "/",
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
     //services: ['chromedriver'],
     //services: ['selenium-standalone'],
-    services: ['docker'],
+    services: ['chromedriver'],
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
