@@ -5,7 +5,7 @@ jobs:
   docker:   
     #   - image: ubuntu-2204:2022.04.2   
       - image: cimg/node:19.2.0
-      - image: circleci/openjdk:8-jdk-stretch
+      - image: cimg/openjdk:19.0.1
     #   - image: cimg/openjdk:19.0.1
     #   - image: cimg/base:2022.06      
     #     auth:
@@ -25,7 +25,7 @@ jobs:
        key: dependency-cache-{{ checksum "package.json" }}
     - run:
        name: install-npm-wee
-       command: npm install;sleep 10
+       command: npm install;sleep 30
     - save_cache:
         paths:
           - "./node_modules"
