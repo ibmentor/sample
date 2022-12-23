@@ -5,7 +5,8 @@ jobs:
   docker:   
     #   - image: ubuntu-2204:2022.04.2   
       - image: cimg/node:19.2.0
-      - image: cimg/openjdk:19.0.1
+      - image: circleci/openjdk:8-jdk-stretch
+    #   - image: cimg/openjdk:19.0.1
     #   - image: cimg/base:2022.06      
     #     auth:
     #       username: sandeep.reddy@infobeans.com
@@ -14,7 +15,7 @@ jobs:
     #   - image: cimg/openjdk
   steps:     
     - checkout
-    - run: java
+    # - run: java
     # - setup_remote_docker:
     #       version: 20.10.14
     - run:  
