@@ -5,10 +5,12 @@ jobs:
   docker:      
       - image: cimg/node:19.2.0
     #   - image: selenium/standalone-chrome
-      - image: cimg/openjdk
+    #   - image: cimg/openjdk
   steps:   
     - checkout
    #  - run: java --version
+    - setup_remote_docker:
+          version: 20.10.14
     - run:  
        name: update-npm
        command: npm install       
@@ -24,9 +26,9 @@ jobs:
     - run: 
          name: test
          command: npm test            
-    # - run: 
-    #      name: docker compose
-    #      command: docker-compose up -d               
+    - run: 
+         name: docker compose
+         command: docker-compose up -d               
     - run: 
          name: test
          command: npm test
