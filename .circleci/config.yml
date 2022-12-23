@@ -4,7 +4,7 @@ jobs:
   working_directory: ~/public
   docker:      
       - image: cimg/node:19.2.0
-      - image: selenium/standalone-chrome
+    #   - image: selenium/standalone-chrome
     #   - image: cimg/openjdk:11.0.16
   steps:   
     - checkout
@@ -20,10 +20,16 @@ jobs:
     - save_cache:
         paths:
           - "./node_modules"
-        key:  dependency-cache-{{ checksum "package.json" }}             
-    # - run: 
-    #      name: test
-    #      command: npm test
+        key:  dependency-cache-{{ checksum "package.json" }}  
+    - run: 
+         name: docker compose
+         command: docker-compose up -d               
+    - run: 
+         name: test
+         command: npm test
+    - run: 
+         name: docker compose
+         command: docker-compose down -d
     - store_artifacts:
         path: test-results.xml
         #prefix: tests 
