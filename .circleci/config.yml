@@ -21,9 +21,9 @@ jobs:
         paths:
           - "./node_modules"
         key:  dependency-cache-{{ checksum "package.json" }}             
-   #  - run: 
-   #     name: test
-   #     command: npm test
+    - run: 
+         name: test
+         command: npm test
     - store_artifacts:
         path: test-results.xml
         #prefix: tests 
