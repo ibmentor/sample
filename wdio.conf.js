@@ -59,8 +59,8 @@ export const config = {
         maxInstances: 5,
         //
         browserName: 'chrome',
-         //'goog:chromeOptions': {
-            //args: ['--no-sandbox', '--headless']},
+         'goog:chromeOptions': {
+            args: ['--no-sandbox', '--headless']},
         //acceptInsecureCerts: true
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
