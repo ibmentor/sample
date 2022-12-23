@@ -7,6 +7,7 @@ jobs:
       - image: cimg/openjdk:14.0-node
   steps:   
     - checkout
+    - run: java --version
     - run:  
        name: update-npm
        command: npm install       
